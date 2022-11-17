@@ -1,5 +1,4 @@
 #include "shell.h"
-
 /**
  * _history - displays the history list, one command by line, preceded
  *              with line numbers, starting at 0.
@@ -12,7 +11,6 @@ int _history(info_t *info)
 print_list(info->history);
 return (0);
 }
-
 /**
  * unset_alias - sets alias to string
  * @info: parameter struct
@@ -36,7 +34,6 @@ i = delete_node_at_index(&(info->alias), get_node_index(info->alias, node_starts
 *p = c;
 return (i);
 }
-
 /**
  * set_alias - sets alias to string
  * @info: parameter struct
@@ -58,7 +55,6 @@ if (!*++p)return (unset_alias(info, str));
 unset_alias(info, str);
 return (add_node_end(&(info->alias), str, 0) == NULL);
 }
-
 /**
  * print_alias - prints an alias string
  * @node: the alias node
@@ -81,7 +77,6 @@ return (0);
 }
 return (1);
 }
-
 /**
  * _alias - mimics the alias builtin (man alias)
  * @info: Structure containing potential arguments. Used to maintain
